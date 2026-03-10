@@ -1,0 +1,274 @@
+body{
+font-family:Arial;
+margin:0;
+background:#af2929;
+color:#aca0a0;
+transition:0.4s;
+}
+
+.dark-mode{
+background:#935526;
+color:white;
+}
+
+
+
+
+/* page floue */
+
+#page{
+filter:blur(8px);
+transition:0.3s;
+}
+
+/* welcome au dessus */
+
+#welcome{
+
+ margin-top: 15%;
+position:fixed;
+justify-content: center;
+top:0;
+left:0;
+width:100%;
+height:auto;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-size:32px;
+font-weight:bold;
+color:linear-gradient(135deg,#bbdbe3,#0e0f11,#ad2222,#1fa50d);
+animation:fadeOut 1s forwards;
+
+z-index:9999;
+}
+@keyframes fadeOut{
+0%{opacity:0.5}
+80%{opacity:0.8}
+100%{
+opacity:0;
+visibility:hidden;
+}
+}
+
+/* quand welcome disparaît */
+
+#welcome.hide{
+opacity:0;
+visibility: h;
+transition:0.3s;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+background:#bb4d12;
+color:white;
+}
+
+.apropos-container {
+    width: auto;
+    height: auto;
+    position: relative;
+    justify-content: center;
+}
+
+.profile_container {
+    width: 100%;
+    height: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+
+.logo-container{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.profile{
+width: 200px;
+height: 200px;
+border-radius:50%;
+margin-left: 43%;
+
+}
+
+.profile img {
+    width: auto;
+    height: auto;
+}
+
+.profile:hover {
+    transform: scale(1.2);
+}
+
+.logo{
+font-size:24px;
+font-weight:bold;
+animation:logoAnim 3s infinite;
+}
+
+@keyframes logoAnim{
+0%{transform:rotate(0)}
+50%{transform:rotate(5deg)}
+100%{transform:rotate(0)}
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:20px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:rgb(128, 92, 33);
+transform:scale(1.2) rotate(-5deg);
+}
+
+#nav-menu ul li a {
+    font-size: 22px;
+}
+
+#nav-menu ul li a:hover {
+    transform: scale(1.5);
+}
+
+.actions{
+display:flex;
+gap:15px;
+}
+
+#mode-btn{
+border:none;
+padding:6px 10px;
+cursor:pointer;
+font-size:18px;
+border-radius: 50%;
+}
+
+.menu-toggle{
+display:none;
+font-size:25px;
+cursor:pointer;
+}
+
+section{
+padding:60px;
+margin:20px;
+background:#0c0338;
+border-radius:10px;
+}
+
+.dark-mode section{
+background:#793d12;
+color: white;
+}
+
+h2{
+transition:0.3s;
+}
+
+h2:hover{
+color:rgb(33, 239, 239);
+transform:scale(1.06);
+}
+
+.contact-links{
+display:flex;
+gap:20px;
+margin-bottom:20px;
+}
+
+.contact-links a{
+text-decoration:none;
+background:#111;
+color:white;
+padding:10px 20px;
+border-radius:8px;
+transition:0.3s;
+}
+
+.contact-links a:hover{
+background:rgb(177, 124, 25);
+color:rgb(51, 4, 4);
+transform:scale(1.1);
+}
+
+form{
+display:flex;
+flex-direction:column;
+gap:10px;
+max-width:400px;
+}
+
+input,textarea{
+padding:10px;
+border-radius:5px;
+border:1px solid #ccc;
+}
+
+button{
+padding:10px;
+border:none;
+background:#111;
+color:white;
+cursor:pointer;
+}
+
+button:hover{
+background:rgb(17, 63, 63);
+color:black;
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:#111;
+color:white;
+margin-top:20px;
+}
+
+@media(max-width:768px){
+
+nav{
+display:none;
+position:absolute;
+top:70px;
+right:0;
+background:#111;
+width:200px;
+}
+
+nav ul{
+flex-direction:column;
+padding:20px;
+}
+
+nav ul li{
+margin:10px 0;
+}
+
+.menu-toggle{
+display:block;
+}
+
+nav.active{
+display:block;
+}
+
+}
